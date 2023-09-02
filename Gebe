@@ -1,0 +1,33 @@
+def hasta_gebe_mi_yaklasimi():
+    print("1- Hasta gebe mi diye sor.")
+    cevap = input("Cevap (evet/hayır): ")
+    
+    if cevap.lower() == "hayır":
+        print("1.1- İşlem iptal.")
+    elif cevap.lower() == "evet":
+        print("1.2- Hasta ÜSYE mi diye sor.")
+        cevap = input("Cevap (evet/hayır): ")
+        
+        if cevap.lower() == "evet":
+            print("2- ÜSYE protokolü önerilir.")
+        else:
+            print("3- Rutin gebelik protokolü ve damar yolu önerilir.")
+            
+            print("4- Hastada sancı, fka(-), leke tarzı kanama var mı diye sor.")
+            cevap = input("Cevap (evet/hayır): ")
+            
+            if cevap.lower() == "hayır":
+                print("4.1- Soruna odaklanın.")
+            elif cevap.lower() == "evet":
+                print("20 haftalıktan az mı çok mu diye sor.")
+                hafta = int(input("Hafta sayısı: "))
+                
+                if hafta < 20:
+                    print("5- Sonuçlar gelene kadar bekletin.")
+                else:
+                    print("6- Asistana devret.")
+                else:
+                    print("Geçersiz cevap. Lütfen 'evet' veya 'hayır' şeklinde cevap verin.")
+
+# Kodu çalıştır
+hasta_gebe_mi_yaklasimi()
